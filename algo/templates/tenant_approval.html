@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tenant Approval Decisions</title>
+    <style>
+        table {width: 50%; border-collapse: collapse; margin: 25px 0; font-size: 18px; text-align: left;}
+        th, td {padding: 12px; border-bottom: 1px solid #ddd;}
+        th {background-color: #f2f2f2;}
+    </style>
+</head>
+<body>
+    <h2>Tenant Approval Decisions</h2>
+    <table>
+        <tr>
+            <th>Income</th>
+            <th>Decision</th>
+        </tr>
+        {% for result in approval_results %}
+        <tr>
+            <td>${{ result.income }}</td>
+            <td>{{ result.decision }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Upload Another Image</a>
+</body>
+</html>
